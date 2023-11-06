@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header ">
+        <div class="container header-flex">
+            <div class=" header-left">
+                <a href="./home.html">
+                    <img class="header-logo" src="./img/sneakers2.svg" alt="index-snikers">
+                </a>
+                <nav class="header-nav">
+                    <ul class="header-navs">
+                        <li class="header-li">
+                            <a class="header-nav-text" href="./home.html">
+                                Collections
+                            </a>
+                        </li>
+                        <li class="header-li">
+                            <a class="header-nav-text" href="./home.html">
+                                Men
+                            </a>
+                        </li>
+                        <li class="header-li">
+                            <a class="header-nav-text" href="./home.html">
+                                Women
+                            </a>
+                        </li>
+                        <li class="header-li">
+                            <a class="header-nav-text" href="./home.html">
+                                About
+                            </a>
+                        </li>
+                        <li class="header-li">
+                            <a class="header-nav-text" href="./home.html">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-right">
+                <button class="header-buy-btn">
+                    <img class="header-buy" src="./img/Group14.svg" alt="buy-icon">
+                </button>
+                <button class="header-oval-btn">
+                    <img class="header-oval" src="./img/Oval.png" alt="header-oval">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="">
+        <div class="container hero-flex">
+            <!-- left -->
+            <div>
+                <img class="hero-img" src="./img/Rectangle2.png" alt="snikers">
+                    <ul class="hero-left">
+                        <li class="hero-li">
+                            <button class="hero-carusel-btn">
+                                <img class="hero-imgs" src="./img/Rectangle2.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hero-carusel-btn">
+                                <img class="hero-imgs" src="./img/Rectangle2.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hero-carusel-btn">
+                                <img class="hero-imgs" src="./img/Rectangle2.png" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hero-carusel-btn">
+                                <img class="hero-imgs" src="./img/Rectangle2.png" alt="">
+                            </button>
+                        </li>
+                    </ul>
+            </div>
+            <!-- right -->
+            <div class="hero-right">
+             <span class="sneakers-com">Sneaker Company</span>
+             <h2 class="sneakers-text">
+                Fall Limited Edition Sneakers
+             </h2>
+             <p class="sneakers-info">
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+             </p>
+             <div class="sneakers-money">
+                <p class="snk-money">$125.00</p>
+                <span class="snk-skidka">50%</span>
+             </div>
+             <s class="snikers-skidka">$250.00</s>
+             <div class="snk-buy-center">
+                <div class="snk-hisob-kitob">
+                    <button class="snk-minus ">
+                        <img class="snk-img" src="./img/Group4.svg" alt="">
+                    </button>
+                    <p class="snk-nechtaligi">0</p>
+                    <button class="snk-plus">
+                        <img class="snk-img" src="./img/plus.svg" alt="">
+                    </button>
+                 </div>
+                 <button class="snk-add-buy">
+                    <img class="snk-buy-icon" src="./img/Shape.svg" alt="">
+                    <p class="snk-buy-text">Add to cart</p>
+                    
+                 </button>
+             </div>
+            </div>
+        </div>
+    </section>
+    <!-- buy-station -->
+    <div class="modal hidden">
+        <h2 class=" modal-title">
+            Cart
+        </h2>
+        
+
+        <p class="modal-free-text">Your cart is empty.</p>
+       
+    </div>
+
+    <div class="overlay hidden"></div>
+         <div class="carusel hidden">
+     <!-- carusel -->
+     <div id="myCarousel" class="carousel">
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+           
+            <div class="carousel-caption">
+               <img class="carusel-img" src="img/Rectanglehd.png" alt="Slide 1">
+            </div>
+          </div>
+    
+          <div class="item">
+           
+            <div class="carousel-caption">
+               <img class="carusel-img" src="img/Rectanglehd.png" alt="Slide 2">
+            </div>
+          </div>
+    
+          <div class="item">
+           
+            <div class="carousel-caption">
+               <img class="carusel-img" src="img/RectangleCopy3.png" alt="Slide 3">
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+           
+            <div class="carousel-caption">
+               <img class="carusel-img" src="img/Rectanglehd.png" alt="Slide 3">
+            </div>
+          </div>
+        </div>
+    
+        <!-- Controls -->
+        <a class="prev" href="#" id="prevBtn">&lt;</a>
+        <a class="next" href="#" id="nextBtn">&gt;</a>
+        <button class="carusel-exit-btn">
+            x
+        </button>
+      </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

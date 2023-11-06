@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    transition: all 0.5s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.header {
+    padding-top: 28px;
+    padding-bottom: 34px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 34px;
+    border-bottom: 1px #E4E9F2 solid;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 137.5px;
+    height: 20px;
+    margin-right: 56.5px;
+}
+
+.header-navs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header-li {
+    margin-right: 32px;
+}
+
+.header-nav-text {
+    color: #69707D;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+.header-nav-text:hover {
+    color: #1D2026;
+    cursor: grab;
+    border-bottom: 4px #FF7E1B solid;
+    padding-bottom: 50px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+
+}
+
+.header-buy-btn {
+    border: none;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 46.18px;
+}
+
+.header-oval-btn {
+    background-color: #fff;
+    border: none;
+
+}
+
+.header-oval-btn:hover {
+    cursor: grab;
+    border: #FF7E1B 2px solid;
+    border-radius: 50px;
+}
+
+.header-buy-btn:hover {
+    cursor: grab;
+}
+
+/* buy-station */
+.modal {
+    width: 360px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.50);
+    padding-top: 24px;
+    position: fixed;
+    top: 94px;
+    right: 89px;
+    transition: all 0.5s ease;
+    padding-bottom: 35px;
+    min-height: 275px;
+}
+
+.modal-free-text {
+    margin-top: 77px;
+    text-align: center;
+    color: #69707D;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.modal-title {
+    color: #1D2026;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 27px;
+    padding-left: 24px;
+    border-bottom: 1px #E4E9F2 solid;
+}
+
+.modal-nomlari {
+    padding-top: 24px;
+    padding-left: 24px;
+
+}
+
+.modal-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.modal-nomi {
+    color: #69707D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.modal-texts {
+    margin-right: 19px;
+}
+
+.modal-flex {
+    display: flex;
+    align-items: center;
+}
+
+.modal-kopaytirish {
+    color: #69707D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-right: 6px;
+}
+
+.modal-narxi {
+    color: #1D2026;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.modal-texts-flex {
+    display: flex;
+    align-items: center;
+}
+
+.buy-station {
+    width: 14px;
+    height: 16px;
+    border: none;
+    background-color: #fff;
+}
+
+.buy-check {
+    padding: 22px 119px 18px 120px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #FF7E1B;
+    border: transparent;
+}
+
+.buy-check,
+.buy-station:hover {
+    cursor: grab;
+}
+
+.buy-check-box {
+    margin-top: 26px;
+    padding-left: 24px;
+}
+
+.buy-check-box:hover {
+    cursor: grab;
+}
+
+.overlay{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+} 
+
+.hero-flex {
+    display: flex;
+    align-items: center;
+}
+
+.hero-right {
+    margin-left: 125px;
+}
+
+.hero-img {
+    width: 445px;
+    height: 445px;
+    border-radius: 15px;
+}
+
+.hero-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    list-style: none;
+}
+
+.hero-imgs {
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+}
+
+.hero-imgs:hover {
+    border-radius: 10px;
+    border: 3px solid #FF7E1B;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    cursor: grab;
+}
+
+.sneakers-com {
+    max-width: 445px;
+    color: #FF7E1B;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sneakers-text {
+    max-width: 445px;
+    color: #1D2026;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-top: 27px;
+}
+
+.sneakers-info {
+    max-width: 445px;
+    color: #69707D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 32px;
+}
+
+.sneakers-money {
+    max-width: 173px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.snk-money {
+    color: #1D2026;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.snk-skidka {
+    padding: 7px 8px 4px 8px;
+    background-color: #FFEEE2;
+    border: transparent;
+    border-radius: 6px;
+    color: #FF7E1B;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.snikers-skidka {
+    color: #B6BCC8;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration-line: strikethrough;
+    margin-top: 10px;
+}
+
+.snk-buy-center {
+    max-width: 445px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.snk-hisob-kitob {
+    display: flex;
+    align-items: center;
+    padding: 23px 16px 22px 16px;
+    background-color: #F6F8FD;
+    border: transparent;
+    border-radius: 10px;
+}
+
+.snk-minus {
+    border: none;
+    background-color: transparent;
+    margin-right: 45.5px;
+}
+
+.snk-minus,
+.snk-plus:hover {
+    cursor: grab;
+}
+
+.snk-nechtaligi {
+    color: #1D2026;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 45.5px;
+}
+
+.snk-plus {
+    border: none;
+    background-color: transparent;
+}
+
+.snk-add-buy {
+    display: flex;
+    align-items: center;
+    padding: 23px 76px 17px 77px;
+    background-color: #FF7E1B;
+    border: transparent;
+    border-radius: 10px;
+}
+
+.snk-add-buy:hover {
+    border-radius: 10px;
+    background: #FFAB6A;
+    box-shadow: 0px 20px 50px -20px #FF7E1B;
+    cursor: grab;
+}
+
+.snk-buy-icon {
+    margin-right: 15.54px;
+}
+
+.snk-buy-text {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* carusel */
+
+.carusel-img {
+    width: 550px;
+    height: 550px;
+}
+
+.carousel {
+    position: fixed;
+    top: 133px;
+    left: 445px;
+    width: 100%;
+    /* Rasmning o'lchami */
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-inner .item.active {
+    opacity: 1;
+}
+
+.prev {
+    position: fixed;
+    top: 370px;
+    left: 417px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px white solid;
+    border-radius: 50%;
+}
+
+.next {
+    position: fixed;
+    top: 370px;
+    left: 967px;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px white solid;
+    border-radius: 50%;
+}
+
+.next:hover{
+    color: #FF7E1B;
+}
+
+.prev:hover{
+    color: #FF7E1B;
+}
+
+.hero-carusel-btn{
+   border: none;    
+}
+
+.carusel-exit-btn{
+position: fixed;
+top: 89px;
+left: 975px;
+border: none;
+background-color: transparent;
+font-size: 35px;
+}
+.carusel-exit-btn:hover{
+    cursor: grab;
+}
