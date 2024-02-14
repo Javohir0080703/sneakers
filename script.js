@@ -11,7 +11,7 @@ const sneakersText = document.querySelector('.sneakers-text');
 let snkMoney = document.querySelector('.snk-money-all');
 const elModalFree = document.querySelector('.modal-free-text');
 const tanlanganMalumot = document.querySelectorAll('.tanlangan-malumot');
-const elDelet = document.querySelectorAll('.buy-station');
+const elDelet = document.querySelector('.buy-station')
 const carousel = document.getElementById('myCarousel');
 const items = carousel.getElementsByClassName('item');
 const prevBtn = document.getElementById('prevBtn');
@@ -22,6 +22,17 @@ const caruselModal = document.querySelector('.carusel')
 const caruselExitBtn = document.querySelector('.carusel-exit-btn')
 const elHeaderKorzinka = document.querySelector('.header-buy-span')
 let korzinka = parseInt(elHeaderKorzinka.textContent)
+const responsiveHamburger = document.querySelector('.responsive-hamburger')
+const responsiveBox = document.querySelector('.responsiv-box')
+const responsivHeaderExit = document.querySelector('.responsiv-header-exit')
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
 
 caruselBtn.addEventListener('click', function () {
   caruselModal.classList.remove('hidden')
@@ -54,12 +65,25 @@ elOverley.addEventListener('click', function () {
   elModalBuy.classList.add('hidden')
   elOverley.style.display = 'none'
   caruselModal.classList.add('hidden')
+  responsiveBox.style.display = 'none'
 })
 
-snkAdd.addEventListener('click', function (e) {
+responsiveHamburger.addEventListener('click', function () {
+  responsiveBox.style.display = 'block'
+  elOverley.style.display = 'block'
+})
+
+responsivHeaderExit.addEventListener('click', function () {
+  responsiveBox.style.display = 'none'
+  elOverley.style.display = 'none '
+})
+
+
+snkAdd.addEventListener('click', function (e) { 
   elModalFree.classList.add('hidden')
-   +elHeaderKorzinka.textContent + 1
   elHeaderKorzinka.classList.remove('hidden')
+  korzinka += 1
+  elHeaderKorzinka.textContent = korzinka.toString();
   elModalBuy.innerHTML += `
     
 <div class="tanlangan-malumot">
@@ -86,7 +110,11 @@ snkAdd.addEventListener('click', function (e) {
 </div>
     `
 
+  son -= son
+  ElNechtaligi.textContent = 0
+ 
 })
+
 
 
 
@@ -115,4 +143,5 @@ nextBtn.addEventListener('click', () => {
 });
 
 showSlide(currentIndex);
+
 
