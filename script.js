@@ -8,10 +8,10 @@ let son = parseInt(ElNechtaligi.textContent);
 const heroImg = document.querySelector('.hero-img');
 const snkAdd = document.querySelector('.snk-add-buy');
 const sneakersText = document.querySelector('.sneakers-text');
-let snkMoney = document.querySelector('.snk-money');
+let snkMoney = document.querySelector('.snk-money-all');
 const elModalFree = document.querySelector('.modal-free-text');
-const tanlanganMalumot = document.querySelector('.tanlangan-malumot');
-const buyDlete = document.querySelector('.buy-station');
+const tanlanganMalumot = document.querySelectorAll('.tanlangan-malumot');
+const elDelet = document.querySelectorAll('.buy-station');
 const carousel = document.getElementById('myCarousel');
 const items = carousel.getElementsByClassName('item');
 const prevBtn = document.getElementById('prevBtn');
@@ -20,52 +20,57 @@ let currentIndex = 0;
 const caruselBtn = document.querySelector('.hero-carusel-btn')
 const caruselModal = document.querySelector('.carusel')
 const caruselExitBtn = document.querySelector('.carusel-exit-btn')
+const elHeaderKorzinka = document.querySelector('.header-buy-span')
+let korzinka = parseInt(elHeaderKorzinka.textContent)
 
+caruselBtn.addEventListener('click', function () {
+  caruselModal.classList.remove('hidden')
+  elOverley.style.display = 'block'
+})
 
-caruselBtn.addEventListener('click', function(){
-    caruselModal.classList.remove('hidden')
-    
-  })
+caruselExitBtn.addEventListener('click', function () {
+  caruselModal.classList.add('hidden')
+  elOverley.style.display = 'none'
+})
 
-  caruselExitBtn.addEventListener('click', function(){
-    caruselModal.classList.add('hidden')
-  })
 elPlus.addEventListener('click', function () {
-    son += 1
-    ElNechtaligi.textContent = son.toString();
+  son += 1
+  ElNechtaligi.textContent = son.toString();
 })
 
 elMinus.addEventListener('click', function () {
-    son = Math.max(0, son - 1)
-    ElNechtaligi.textContent = son.toString();
+  son = Math.max(0, son - 1)
+  ElNechtaligi.textContent = son.toString();
+
 })
 
 elBuyIcon.addEventListener('click', function () {
-    elModalBuy.classList.remove('hidden')
-    elOverley.style.display = 'block'
+  elModalBuy.classList.remove('hidden')
+  elOverley.style.display = 'block'
 })
 
 
 elOverley.addEventListener('click', function () {
-    elModalBuy.classList.add('hidden')
-    elOverley.style.display = 'none'
-
+  elModalBuy.classList.add('hidden')
+  elOverley.style.display = 'none'
+  caruselModal.classList.add('hidden')
 })
 
-snkAdd.addEventListener( 'click', function (e) {
-    elModalFree.classList.add('hidden')
-
-    elModalBuy.innerHTML += `
+snkAdd.addEventListener('click', function (e) {
+  elModalFree.classList.add('hidden')
+   +elHeaderKorzinka.textContent + 1
+  elHeaderKorzinka.classList.remove('hidden')
+  elModalBuy.innerHTML += `
     
 <div class="tanlangan-malumot">
 <div class="modal-nomlari">
     <div class="modal-texts-flex">
-        <img class="modal-img" src="${heroImg}" alt="">
+        <img class="modal-img" src="./img/Rectangle2.png" alt="">
         <div class="modal-texts">
             <p class="modal-nomi">${sneakersText.textContent}</p>
             <div class="modal-flex">
-                <p class="modal-kopaytirish">${snkMoney.textContent}*${ElNechtaligi.textContent}</p>
-                <span class="modal-narxi">  </span>
+                <p class="modal-kopaytirish">$${snkMoney.textContent} * ${ElNechtaligi.textContent}</p>
+                <span class="modal-narxi">$${+snkMoney.textContent * +ElNechtaligi.textContent}</span>
             </div>
         </div>
         <button class="buy-station">
@@ -80,31 +85,34 @@ snkAdd.addEventListener( 'click', function (e) {
 </div>
 </div>
     `
+
 })
 
+
+
 function showSlide(index) {
-    if (index >= items.length) {
-      currentIndex = 0;
-    } else if (index < 0) {
-      currentIndex = items.length - 1;
-    }
-  
-    for (let i = 0; i < items.length; i++) {
-      items[i].classList.remove('active');
-    }
-  
-    items[currentIndex].classList.add('active');
+  if (index >= items.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = items.length - 1;
   }
-  
-  prevBtn.addEventListener('click', () => {
-    currentIndex--;
-    showSlide(currentIndex);
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    currentIndex++;
-    showSlide(currentIndex);
-  });
-  
-  showSlide(currentIndex); 
+
+  for (let i = 0; i < items.length; i++) {
+    items[i].classList.remove('active');
+  }
+
+  items[currentIndex].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex--;
+  showSlide(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex++;
+  showSlide(currentIndex);
+});
+
+showSlide(currentIndex);
 

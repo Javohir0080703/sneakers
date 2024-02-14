@@ -82,6 +82,7 @@
     height: 50px;
     border-radius: 50px;
     margin-right: 46.18px;
+    position: relative;
 }
 
 .header-oval-btn {
@@ -113,6 +114,7 @@
     transition: all 0.5s ease;
     padding-bottom: 35px;
     min-height: 275px;
+    z-index: 999;
 }
 
 .modal-free-text {
@@ -213,8 +215,21 @@
     cursor: grab;
 }
 
-.overlay{
-    display: none; 
+.header-buy-span {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 7px;
+    background-color: #FF7E1B;
+    border-radius: 50%;
+
+}
+
+.overlay {
+    display: none;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -222,7 +237,7 @@
     width: 100%;
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
-} 
+}
 
 .hero-flex {
     display: flex;
@@ -316,7 +331,6 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 26px;
-    text-decoration-line: strikethrough;
     margin-top: 10px;
 }
 
@@ -388,7 +402,7 @@
 }
 
 
-/* carusel */
+
 
 .carusel-img {
     width: 550px;
@@ -397,11 +411,12 @@
 
 .carousel {
     position: fixed;
-    top: 133px;
-    left: 445px;
+    top: 90px;
+    left: 500px;
     width: 100%;
     /* Rasmning o'lchami */
     overflow: hidden;
+    z-index: 999;
 }
 
 .carousel-inner {
@@ -426,7 +441,7 @@
 .prev {
     position: fixed;
     top: 370px;
-    left: 417px;
+    left: 475px;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -438,14 +453,14 @@
     text-decoration: none;
     border: 1px white solid;
     border-radius: 50%;
+    z-index: 999;
 }
 
 .next {
     position: fixed;
     top: 370px;
-    left: 967px;
+    left: 1028px;
     transform: translateY(-50%);
-
     width: 50px;
     height: 50px;
     background-color: white;
@@ -456,28 +471,32 @@
     text-decoration: none;
     border: 1px white solid;
     border-radius: 50%;
+    z-index: 999;
 }
 
-.next:hover{
+.next:hover {
     color: #FF7E1B;
 }
 
-.prev:hover{
+.prev:hover {
     color: #FF7E1B;
 }
 
-.hero-carusel-btn{
-   border: none;    
+.hero-carusel-btn {
+    border: none;
 }
 
-.carusel-exit-btn{
-position: fixed;
-top: 89px;
-left: 975px;
-border: none;
-background-color: transparent;
-font-size: 35px;
+.carusel-exit-btn {
+    position: fixed;
+    top: 55px;
+    left: 1028px;
+    border: none;
+    background-color: transparent;
+    font-size: 35px;
+    z-index: 999;
 }
-.carusel-exit-btn:hover{
+
+.carusel-exit-btn:hover {
     cursor: grab;
+    color: #FF7E1B;
 }
